@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
 
   private
 
+  ENV['FOURSQUARE_CLIENT_ID'] = 'SWS5QECKMFVXFCFUVG3MDXIWFHMM4NR1MAQE1TZE3QYJRVIU'
+  ENV['FOURSQUARE_SECRET'] = 'JLLQI0H1KAIJJ342ZUAVZLGFKHAALXIXZRW41PWB3WS1CV5M'
+
   def authenticate_user
     client_id = ENV['FOURSQUARE_CLIENT_ID']
     redirect_uri = CGI.escape("http://localhost:3000/auth")
